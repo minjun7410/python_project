@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QToolButton,QLayout, QApplication, QWidget, QLabel, QGridLayout
 import collections
-
 class findall():
+
     def __init__(self):
         html = urlopen("https://cs.kookmin.ac.kr/")
         bsObject = BeautifulSoup(html, "html.parser")
@@ -42,8 +42,6 @@ class kookminnotice(QWidget):
         '''
         '''self.label_list = [self.label1, self.label2, self.label3, self.label4, self.label5, self.label6, self.label7,
                            self.label8, self.label9]'''
-        for i in range(9):
-            self.label_list[i].setText(' ')
         self.go_Button = QToolButton()
         self.go_Button.setText("Search")
         self.go_Button.clicked.connect(self.Button)
